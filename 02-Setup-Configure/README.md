@@ -1,13 +1,24 @@
-# Terraform CDK Series with Azure:-
+Greetings my fellow Technology Advocates and Specialists.
 
-| __TERRAFORM CDK (CLoud Developement Kit):-__ |
-| --------- |
-| ![image](https://github.com/arindam0310018/15-April-2024-DevOps__Terraform-CDK/assets/29681063/79e92840-00b2-4f91-8638-5d49ec3205c5) |
+This is __Chapter #2__ of my Terraform CDK (Cloud Development Kit) Series.
 
-| __DETAILS:-__ |
+In this Session, I will demonstrate __How to Setup and Configure Terraform CDK (Cloud Development Kit) to define Infrastructure.__ 
+
+I had the Privilege to talk on this topic in __ONE__ Azure Communities:-
+
+| __NAME OF THE AZURE COMMUNITY__ | __TYPE OF SPEAKER SESSION__ |
+| --------- | --------- |
+| __Global Azure - 2024__ | __Virtual__ |
+
+| __EVENT ANNOUNCEMENTS:-__ |
 | --------- |
-| 1. Language used here is __TYPESCRIPT__ |
-| 2. Browse to each folder (for example - Resource-Group) and look for "main.ts" for the TypeScript Code. |
+| ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/f49kbd241uellfqdj65e.jpg) |
+
+| __POINTS TO NOTE:-__ |
+| --------- |
+| 1. Cloud Provider is __Microsoft Azure__. |
+| 1. Language used here is __TYPESCRIPT__. |
+| 2. Browse to each folder under "03-Code-Source" (for example - Resource-Group) and look for "main.ts" for the TypeScript Code. |
 
 | __PRE-REQUISITES:-__ |
 | --------- |
@@ -23,16 +34,16 @@
 | ![5](https://github.com/arindam0310018/15-April-2024-DevOps__Terraform-CDK/assets/29681063/ed227e5f-7141-4e02-ae44-122c9f6924b6) |
 | ![6](https://github.com/arindam0310018/15-April-2024-DevOps__Terraform-CDK/assets/29681063/52798629-d47b-4ecf-b837-b438afbb0525) |
 
-| __LOCAL DIRECTORY STRUCTURE FOR CODE REPOSITORY:-__ |
+| __LOCAL DIRECTORY STRUCTURE FOR CODE:-__ |
 | --------- |
 | ![7](https://github.com/arindam0310018/15-April-2024-DevOps__Terraform-CDK/assets/29681063/1320ac9f-4f16-47ab-b1ca-c2ab94ecdf37) |
 
-| __INITIALIZE TERRAFORM CDK LOCALLY:-__ |
+| __INITIALIZE CDK FOR TERRAFORM LOCALLY:-__ |
 | --------- |
 | ![8](https://github.com/arindam0310018/15-April-2024-DevOps__Terraform-CDK/assets/29681063/dd8f4c0e-3575-4210-8700-55f32fd43dc9) |
 | ![9](https://github.com/arindam0310018/15-April-2024-DevOps__Terraform-CDK/assets/29681063/a4b2f868-60db-4b18-82e7-3f6d3981845a) |
 
-| __FILES AND FOLDERS CREATED AFTER TERRAFORM CDK INITIALIZATION:-__ |
+| __FILES AND FOLDERS CREATED AFTER CDK FOR TERRAFORM IS INITIALIZED:-__ |
 | --------- |
 | ![10](https://github.com/arindam0310018/15-April-2024-DevOps__Terraform-CDK/assets/29681063/e2bd5f52-9786-4223-b4ab-0e681b87e52d) |
 
@@ -44,8 +55,11 @@
 | --------- |
 | ![CDKTF-Deploy](https://github.com/arindam0310018/15-April-2024-DevOps__Terraform-CDK/assets/29681063/79e8b826-69a5-40cb-85d4-460e6c0200f1) |
 
+| __OUTPUT FROM AZURE PORTAL:-__ |
+| --------- |
+| ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/avr9b46amh17tpdrr5un.jpg) |
 
-| __TROUBLESHOOTING:-__ |
+| __BELOW FOLLOWS ALL THE TROUBLESHOOTING STEPS:-__ |
 | --------- |
 
 | __ERROR #1:-__ |
@@ -86,7 +100,6 @@ new AzurermProvider(this, "AzureRm", {
       features: {},
     });
 ```
-
 | __ERROR #6:-__ |
 | --------- |
 | ![Err-cdktf-deploy-1](https://github.com/arindam0310018/15-April-2024-DevOps__Terraform-CDK/assets/29681063/f0e71c68-adcd-4891-b629-af4a6f1fb1bb) |
@@ -94,5 +107,6 @@ new AzurermProvider(this, "AzureRm", {
 | The Refresh token has expired due to inactivity. We need to execute "az login" command. |
 | ![az-login](https://github.com/arindam0310018/15-April-2024-DevOps__Terraform-CDK/assets/29681063/3cc29c04-e17d-45e4-be57-635cc77c2e4f) |
 
+__Hope You Enjoyed the Session!!!__
 
-
+__Stay Safe | Keep Learning | Spread Knowledge__
