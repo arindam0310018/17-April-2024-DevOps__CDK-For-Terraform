@@ -10,7 +10,7 @@ In this Session, I talk and run Demo on __TERRAFORM CDK SERIES__ in below __TECH
 | __DATE__ | __TOPICS__ | __CONTENT__ |
 | --------- |:---------:| -------:|
 | 17.04.2024 | CDK for Terraform - Quickstart | https://dev.to/arindam0310018/cdk-for-terraform-quickstart-1h3e |
-| 18.09.2022 | CDK for Terraform - Setup & Configure | https://dev.to/arindam0310018/cdk-for-terraform-setup-configure-f42 |
+| 17.04.2024 | CDK for Terraform - Setup & Configure | https://dev.to/arindam0310018/cdk-for-terraform-setup-configure-f42 |
 | 05.05.2024 | CDK For Terraform: MS Hosted Windows Build Agent | https://dev.to/arindam0310018/cdk-for-terraform-ms-hosted-windows-build-agent-3mon |
 | 05.05.2024 | CDK For Terraform: MS Hosted Linux Build Agent | https://dev.to/arindam0310018/cdk-for-terraform-ms-hosted-linux-build-agent-1egi |
 
