@@ -1,0 +1,69 @@
+trigger:
+  none
+
+######################
+#DECLARE VARIABLES:-
+######################
+variables:
+  ServiceConnection: amcloud-cicd-service-connection
+  BuildAgent_Win: windows-latest
+  envName: NonProd
+
+#########################
+# Declare Build Agents:-
+#########################
+pool:
+  vmImage: $(BuildAgent_Win)
+
+###################
+# Declare Stages:-
+###################
+
+stages:
+
+- stage: TEST_CDK_FOR_TERRAFORM_ON_WINDOWS 
+  jobs:
+  - job: TEST_CDK_FOR_TERRAFORM_ON_WINDOWS 
+    displayName: TEST CDK FOR TERRAFORM ON WINDOWS
+    steps:
+
+##################################################
+# Test CDK for Terraform in Windows Build Agent:-
+##################################################
+    - task: AzureCLI@2
+      displayName: Test CDK for Terraform on Windows
+      inputs:
+        azureSubscription: $(ServiceConnection)
+        scriptType: ps
+        scriptLocation: inlineScript
+        inlineScript: |
+          echo "##########################################################"
+          $choco_ver = choco -v
+          echo "The latest chocolatey version installed is: $choco_ver"
+          echo "##########################################################"
+          
+          echo "Terraform is NOT INSTALLED!."
+          echo " Proceed to installation..."
+          echo "##########################################################"
+          choco install terraform -y
+          $tf_validate_install = terraform -v
+          echo "##########################################################"
+          echo "The latest terraform version installed is: $tf_validate_install"
+          echo "##########################################################"
+          
+          $node_ver = node --version
+          echo "The latest node version installed is: $node_ver"
+          echo "##########################################################"
+          
+          $yarn_ver = yarn --version
+          echo "The latest yarn version installed is: $yarn_ver"
+          echo "##########################################################"
+          
+          echo "CDK for Terraform is NOT INSTALLED!."
+          echo "Proceed to installation..."
+          npm install --global cdktf-cli@latest
+          npm install @cdktf/provider-azurerm
+          echo "##########################################################"
+          $cdktf_validate_install = cdktf --version
+          echo "The latest cdktf version installed is: $cdktf_validate_install"
+          echo "##########################################################"
